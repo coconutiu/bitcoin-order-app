@@ -1,12 +1,20 @@
-language: node_js node_js:
-  - node dist: bionic sudo: required notifications:
+language: node_js
+node_js:
+  - node
+
+dist: bionic
+sudo: required
+
+notifications:
   email:
     recipients:
       - liuxh216@gmail.com
     on_success: always
-    on_failure: always branches:
+    on_failure: always
+branches:
   only:
-   - development before_script:
+   - development
+before_script:
   - npm install -g @angular/cli
   
 script:
